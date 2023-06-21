@@ -1,4 +1,4 @@
-FROM redis:latest
+FROM ubuntu:latest
 
 # RUN adduser demo --disabled-password
 RUN adduser demo;echo 'demo:orcascantest' | chpasswd
