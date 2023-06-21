@@ -4,6 +4,6 @@ FROM ubuntu:latest
 RUN adduser demo;echo 'demo:orcascantest' | chpasswd
 
 # Uncomment the below line to set the a specific user for the container execution instead of running with user root
-USER demo
+USER root
 
 CMD ["sh"]
