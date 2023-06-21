@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     env: 
       IMAGE_NAME: base_infra:latest
-      PROJECT_KEY: default
+      PROJECT_KEY: orcagithub
       CLI_VERSION: latest
     steps:
     - name: Checkout
