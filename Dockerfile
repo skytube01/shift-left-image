@@ -1,4 +1,4 @@
-FROM radis:latest
+FROM redis:latest
 
 # RUN adduser demo --disabled-password
 RUN adduser demo;echo 'demo:orcascantest' | chpasswd
