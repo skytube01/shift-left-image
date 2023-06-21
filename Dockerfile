@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM radis:latest
 
 # RUN adduser demo --disabled-password
 RUN adduser demo;echo 'demo:orcascantest' | chpasswd
