@@ -1,6 +1,6 @@
 name: Image Scan - Demo pipeline
 
-on: fork
+on: push
 
 jobs:
 
@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     env: 
       IMAGE_NAME: base_infra:latest
-      PROJECT_KEY: orcagithub
+      PROJECT_KEY: default
       CLI_VERSION: latest
     steps:
     - name: Checkout
