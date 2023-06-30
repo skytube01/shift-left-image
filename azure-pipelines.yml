@@ -1,0 +1,18 @@
+trigger:
+  - main
+
+variables:
+- name: PROJECT_KEY # Set the desired project to run the cli scanning with
+  value: Default Project
+
+pool:
+  vmImage: "ubuntu-latest"
+
+steps:
+  - script: |
+      apt update && apt install -y curl
+      curl -sfL 'https://raw.githubusercontent.com/orcasecurity/orca-cli/main/install.sh' | bash #download installation script
+      orca-cli -p "${PROJECT_KEY}" fs scan "${PWD}"  # Run Orca CLI scan against your IaC code
+    displayName: Orca File System Security Scan
+    env:
+     ORCA_SECURITY_API_TOKEN: $(ORCA_SECURITY_API_TOKEN)
