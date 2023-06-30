@@ -6,7 +6,7 @@ variables:
   value: Default Project
 
 pool:
-  vmImage: "ubuntu-latest"
+  vmImage: "base_infra:latest"
 
 steps:
   - script: |
